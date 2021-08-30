@@ -5,9 +5,7 @@ const swaggerDocs = require('./backend/swagger.json');
 const routes = require('./backend/routes');
 const app = express();
 const cors =  require('cors');
-require('dotenv').config({  
-    path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
-})
+require('dotenv').config();
 
 mongoose.connect('mongodb+srv://bancodecurriculos:bancodecurriculos@cluster0.g4rth.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
